@@ -57,7 +57,14 @@ class ClienteController extends Controller
     {
         $data = $request->validated();
 
+        // Verifica se uma nova imagem foi enviada
         if ($request->hasFile('imagem')) {
+            // Deleta a imagem antiga, se existir
+            if ($cliente->imagem && \Storage::disk('public')->exists($cliente->imagem)) {
+                \Storage::disk('public')->delete($cliente->imagem);
+            }
+
+            // Salva a nova imagem
             $data['imagem'] = $request->file('imagem')->store('clientes', 'public');
         }
 
