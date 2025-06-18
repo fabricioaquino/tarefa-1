@@ -52,7 +52,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="4" class="text-center">Nenhum cliente encontrado.</td>
+                    <td colspan="5" class="text-center">Nenhum cliente encontrado.</td>
                 </tr>
             @endforelse
         </tbody>
