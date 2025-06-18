@@ -76,7 +76,6 @@ class ClienteController extends Controller
             \Storage::disk('public')->delete($cliente->imagem);
         }
 
-        // Exclui o cliente
         $cliente->delete();
 
         return redirect()->route('clientes.index')->with('success', 'Cliente excluído com sucesso!');
