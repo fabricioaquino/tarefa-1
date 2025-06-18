@@ -23,7 +23,11 @@ cd tarefa-1
 ```
 
 ### 2. Execute o script `setup.ps1` se estiver no Windows ou `makefile` se estiver usando Linux
-
+- Windows
 ```bash
 .\setup.ps1
+```
+- Linux
+```bash
+make setup
 ```
